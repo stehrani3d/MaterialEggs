@@ -1,0 +1,31 @@
+#usda 1.0
+(
+    defaultPrim = "egg_crystal"
+    framesPerSecond = 30
+    metersPerUnit = 1
+    timeCodesPerSecond = 30
+    upAxis = "Y"
+)
+
+def Xform "egg_crystal" (
+    prepend apiSchemas = ["GeomModelAPI"]
+    assetInfo = {
+        asset identifier = @./egg_crystal.usd@
+        string name = "egg_crystal"
+        asset thumbnail = @./thumbnail.png@
+    }
+    prepend inherits = </__class__/egg_crystal>
+    kind = "component"
+    prepend payload = @./payload.usdc@
+)
+{
+    float3[] extentsHint = [(3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (-0.022005681, 0, -0.022005681), (0.022005681, 0.05999268, 0.022005681), (-0.022111539, -0.000041045987, -0.02209463), (0.021979777, 0.05990207, 0.022028081)]
+}
+
+class "__class__"
+{
+    class "egg_crystal"
+    {
+    }
+}
+

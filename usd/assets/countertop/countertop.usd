@@ -1,0 +1,31 @@
+#usda 1.0
+(
+    defaultPrim = "countertop"
+    framesPerSecond = 24
+    metersPerUnit = 1
+    timeCodesPerSecond = 24
+    upAxis = "Y"
+)
+
+def Xform "countertop" (
+    prepend apiSchemas = ["GeomModelAPI"]
+    assetInfo = {
+        asset identifier = @./countertop.usd@
+        string name = "countertop"
+        asset thumbnail = @./thumbnail.png@
+    }
+    prepend inherits = </__class__/countertop>
+    kind = "component"
+    prepend payload = @./payload.usdc@
+)
+{
+    custom vector3f[] extentsHint = [(-1.9337684, -0.34256127, -0.64755094), (1.9337668, 0.00050878635, 0.64755094)]
+}
+
+class "__class__"
+{
+    class "countertop"
+    {
+    }
+}
+

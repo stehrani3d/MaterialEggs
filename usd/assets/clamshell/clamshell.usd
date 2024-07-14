@@ -1,0 +1,49 @@
+#usda 1.0
+(
+    defaultPrim = "clamshell"
+    framesPerSecond = 24
+    metersPerUnit = 1
+    timeCodesPerSecond = 24
+    upAxis = "Y"
+)
+
+def Xform "clamshell" (
+    assetInfo = {
+        asset identifier = @./clamshell.usd@
+        string name = "clamshell"
+        asset thumbnail = @./thumbnail.png@
+    }
+    prepend inherits = </__class__/clamshell>
+    kind = "component"
+    prepend payload = @./payload.usdc@
+    variants = {
+        string geo = "componentgeometry_clamshell_closed"
+    }
+    prepend variantSets = "geo"
+)
+{
+    variantSet "geo" = {
+        "componentgeometry_clamshell_closed" (
+            prepend apiSchemas = ["GeomModelAPI"]
+            kind = "component"
+        ) {
+            float3[] extentsHint = [(3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (-0.15006253, 0.000018887742, -0.0777996), (0.15008341, 0.07191603, 0.077060685), (-0.15006529, 0.000019211951, -0.07777497), (0.1500837, 0.07191429, 0.077063404)]
+
+        }
+        "componentgeometry_clamshell_open" (
+            prepend apiSchemas = ["GeomModelAPI"]
+            kind = "component"
+        ) {
+            float3[] extentsHint = [(3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (-0.15006253, 0.00001903167, -0.23868683), (0.15023513, 0.06907543, 0.076953314), (-0.15006527, 0.000019358613, -0.23868214), (0.150243, 0.0690806, 0.07693316)]
+
+        }
+    }
+}
+
+class "__class__"
+{
+    class "clamshell"
+    {
+    }
+}
+

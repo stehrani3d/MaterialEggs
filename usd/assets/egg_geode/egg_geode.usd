@@ -1,0 +1,31 @@
+#usda 1.0
+(
+    defaultPrim = "egg_geode"
+    framesPerSecond = 30
+    metersPerUnit = 1
+    timeCodesPerSecond = 30
+    upAxis = "Y"
+)
+
+def Xform "egg_geode" (
+    prepend apiSchemas = ["GeomModelAPI"]
+    assetInfo = {
+        asset identifier = @./egg_geode.usd@
+        string name = "egg_geode"
+        asset thumbnail = @./thumbnail.png@
+    }
+    prepend inherits = </__class__/egg_geode>
+    kind = "component"
+    prepend payload = @./payload.usdc@
+)
+{
+    float3[] extentsHint = [(3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (-0.022031268, 0.00008326817, -0.022040205), (0.021954125, 0.060008, 0.016444646), (-0.022044009, 0.000027092421, -0.022026457), (0.021994641, 0.060101267, 0.0164212)]
+}
+
+class "__class__"
+{
+    class "egg_geode"
+    {
+    }
+}
+

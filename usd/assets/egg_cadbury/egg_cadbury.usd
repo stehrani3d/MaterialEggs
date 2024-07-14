@@ -1,0 +1,31 @@
+#usda 1.0
+(
+    defaultPrim = "egg_cadbury"
+    framesPerSecond = 30
+    metersPerUnit = 1
+    timeCodesPerSecond = 30
+    upAxis = "Y"
+)
+
+def Xform "egg_cadbury" (
+    prepend apiSchemas = ["GeomModelAPI"]
+    assetInfo = {
+        asset identifier = @./egg_cadbury.usd@
+        string name = "egg_cadbury"
+        asset thumbnail = @./thumbnail.png@
+    }
+    prepend inherits = </__class__/egg_cadbury>
+    kind = "component"
+    prepend payload = @./payload.usdc@
+)
+{
+    float3[] extentsHint = [(3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (-0.021580655, -0.00018642556, -0.021405863), (0.021580655, 0.053515524, 0.021405865), (-0.021537753, -0.00018266174, -0.021381674), (0.021590525, 0.053497035, 0.02140788)]
+}
+
+class "__class__"
+{
+    class "egg_cadbury"
+    {
+    }
+}
+

@@ -1,0 +1,31 @@
+#usda 1.0
+(
+    defaultPrim = "egg_white"
+    framesPerSecond = 30
+    metersPerUnit = 1
+    timeCodesPerSecond = 30
+    upAxis = "Y"
+)
+
+def Xform "egg_white" (
+    prepend apiSchemas = ["GeomModelAPI"]
+    assetInfo = {
+        asset identifier = @./egg_white.usd@
+        string name = "egg_white"
+        asset thumbnail = @./thumbnail.png@
+    }
+    prepend inherits = </__class__/egg_white>
+    kind = "component"
+    prepend payload = @./payload.usdc@
+)
+{
+    float3[] extentsHint = [(3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (-0.022005681, 0, -0.022005681), (0.022005681, 0.05999268, 0.022005681), (-0.021959005, 0, -0.021959005), (0.021959005, 0.060000002, 0.021959005)]
+}
+
+class "__class__"
+{
+    class "egg_white"
+    {
+    }
+}
+

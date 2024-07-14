@@ -1,0 +1,31 @@
+#usda 1.0
+(
+    defaultPrim = "macbeth_chart"
+    framesPerSecond = 24
+    metersPerUnit = 1
+    timeCodesPerSecond = 24
+    upAxis = "Y"
+)
+
+def Xform "macbeth_chart" (
+    prepend apiSchemas = ["GeomModelAPI"]
+    assetInfo = {
+        asset identifier = @./macbeth_chart.usd@
+        string name = "macbeth_chart"
+        asset thumbnail = @./thumbnail.png@
+    }
+    prepend inherits = </__class__/macbeth_chart>
+    kind = "component"
+    prepend payload = @./payload.usdc@
+)
+{
+    float3[] extentsHint = [(-0.1397, -0.09604374, -0.0021828103), (0.1397, 0.09604374, 0.002182814)]
+}
+
+class "__class__"
+{
+    class "macbeth_chart"
+    {
+    }
+}
+

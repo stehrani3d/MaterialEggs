@@ -1,0 +1,31 @@
+#usda 1.0
+(
+    defaultPrim = "egg_onigiri"
+    framesPerSecond = 30
+    metersPerUnit = 1
+    timeCodesPerSecond = 30
+    upAxis = "Y"
+)
+
+def Xform "egg_onigiri" (
+    prepend apiSchemas = ["GeomModelAPI"]
+    assetInfo = {
+        asset identifier = @./egg_onigiri.usd@
+        string name = "egg_onigiri"
+        asset thumbnail = @./thumbnail.png@
+    }
+    prepend inherits = </__class__/egg_onigiri>
+    kind = "component"
+    prepend payload = @./payload.usdc@
+)
+{
+    float3[] extentsHint = [(3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (-0.022737285, -0.00029922515, -0.022078535), (0.022910567, 0.061082598, 0.0221415), (-0.02263418, -0.0004000905, -0.022128802), (0.022744132, 0.060837246, 0.022139946)]
+}
+
+class "__class__"
+{
+    class "egg_onigiri"
+    {
+    }
+}
+

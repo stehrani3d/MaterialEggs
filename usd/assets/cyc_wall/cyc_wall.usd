@@ -1,0 +1,31 @@
+#usda 1.0
+(
+    defaultPrim = "cyc_wall"
+    framesPerSecond = 24
+    metersPerUnit = 1
+    timeCodesPerSecond = 24
+    upAxis = "Y"
+)
+
+def Xform "cyc_wall" (
+    prepend apiSchemas = ["GeomModelAPI"]
+    assetInfo = {
+        asset identifier = @./cyc_wall.usd@
+        string name = "cyc_wall"
+        asset thumbnail = @./thumbnail.png@
+    }
+    prepend inherits = </__class__/cyc_wall>
+    kind = "component"
+    prepend payload = @./payload.usdc@
+)
+{
+    float3[] extentsHint = [(-0.74, -3.2346428e-8, -0.8), (0.74, 0.20000003, 0.6)]
+}
+
+class "__class__"
+{
+    class "cyc_wall"
+    {
+    }
+}
+

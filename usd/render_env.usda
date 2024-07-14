@@ -1,0 +1,126 @@
+#usda 1.0
+(
+    endTimeCode = 76
+    framesPerSecond = 30
+    metersPerUnit = 1
+    startTimeCode = 76
+    timeCodesPerSecond = 30
+    upAxis = "Y"
+)
+
+def Xform "geometry"
+{
+    def "cyc_wall" (
+        prepend references = @./assets/cyc_wall/cyc_wall.usd@
+    )
+    {
+        matrix4d xformOp:transform:transform_cyc_wall = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0.023927328176796436, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:transform_cyc_wall"]
+    }
+
+    def "macbeth_chart" (
+        prepend references = @./assets/macbeth_chart/macbeth_chart.usd@
+    )
+    {
+        string primvars:karma:object:rendervisibility = "-shadow" (
+            interpolation = "constant"
+        )
+        matrix4d xformOp:transform:transform_macbeth_chart = ( (0.06, 0, 0, 0), (0, 0.06, 0, 0), (0, 0, 0.06, 0), (0.026, 0.069, 0.012, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:transform_macbeth_chart"]
+    }
+
+    def "sphere_chrome" (
+        prepend references = @./assets/quadsphere/quadsphere.usd@
+        variants = {
+            string mtl = "chrome"
+        }
+    )
+    {
+        string primvars:karma:object:rendervisibility = "-shadow" (
+            interpolation = "constant"
+        )
+        matrix4d xformOp:transform:transform_sphere_chrome = ( (0.045, 0, 0, 0), (0, 0.045, 0, 0), (0, 0, 0.045, 0), (-0.031, 0.069, 0.012, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:transform_sphere_chrome"]
+    }
+
+    def "sphere_midgray" (
+        prepend references = @./assets/quadsphere/quadsphere.usd@
+    )
+    {
+        string primvars:karma:object:rendervisibility = "-shadow" (
+            interpolation = "constant"
+        )
+        matrix4d xformOp:transform:transform_sphere_midgray = ( (0.045, 0, 0, 0), (0, 0.045, 0, 0), (0, 0, 0.045, 0), (-0.019, 0.069, 0.012, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:transform_sphere_midgray"]
+    }
+}
+
+def Xform "lights"
+{
+    def DomeLight "studio_small_3" (
+        prepend apiSchemas = ["HoudiniViewportGuideAPI"]
+    )
+    {
+        custom rel filters = None
+        float houdini:guidescale = 1
+        bool houdini:inviewermenu = 0
+        color3f inputs:color = (1, 1, 1)
+        float inputs:diffuse = 1
+        bool inputs:enableColorTemperature = 0
+        float inputs:exposure = -2
+        float inputs:intensity = 1
+        bool inputs:normalize = 0
+        float inputs:specular = 1
+        asset inputs:texture:file = @../tex/hdri/studio_small_03_4k.exr@
+        token inputs:texture:format = "automatic"
+        rel light:filters = None
+        rel portals = None
+        matrix4d xformOp:transform.timeSamples = {
+            76: ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1) ),
+        }
+        matrix4d xformOp:transform:offset_dome_rotation.timeSamples = {
+            76: ( (-0.6427876096865394, 0, 0.766044443118978, 0), (0, 1, 0, 0), (-0.766044443118978, 0, -0.6427876096865394, 0), (0, 0, 0, 1) ),
+        }
+        uniform token[] xformOpOrder = ["xformOp:transform", "xformOp:transform:offset_dome_rotation"]
+    }
+}
+
+def Xform "cameras"
+{
+    def Camera "camera" (
+        prepend apiSchemas = ["HoudiniCameraPlateAPI", "HoudiniViewportGuideAPI"]
+    )
+    {
+        float2 clippingRange = (0.01, 1000000)
+        float exposure = 0
+        float focalLength.timeSamples = {
+            76: 1,
+        }
+        float focusDistance = 0.4058411
+        float fStop = 22
+        float horizontalAperture.timeSamples = {
+            76: 0.20955,
+        }
+        float horizontalApertureOffset.timeSamples = {
+            76: 0,
+        }
+        asset houdini:backgroundimage = @@
+        asset houdini:foregroundimage = @@
+        float houdini:guidescale.timeSamples = {
+            76: 1,
+        }
+        bool houdini:inviewermenu = 1
+        token projection = "perspective"
+        double shutter:close = 0.25
+        double shutter:open = -0.25
+        float verticalAperture.timeSamples = {
+            76: 0.20955,
+        }
+        float verticalApertureOffset.timeSamples = {
+            76: 0,
+        }
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0.038, 0.42, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+}
+
