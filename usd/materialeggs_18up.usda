@@ -1,0 +1,310 @@
+#usda 1.0
+(
+    endTimeCode = 1
+    framesPerSecond = 30
+    metersPerUnit = 1
+    startTimeCode = 1
+    timeCodesPerSecond = 30
+    upAxis = "Y"
+)
+
+def Xform "geometry"
+{
+    matrix4d xformOp:transform:place_eggs = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1) )
+    uniform token[] xformOpOrder = ["xformOp:transform:place_eggs"]
+
+    def "egg_damascus" (
+        prepend references = @./assets/egg_damascus/egg_damascus.usd@
+    )
+    {
+        matrix4d xformOp:transform:place_eggs = ( (-0.9848077297210693, 0, -0.1736481785774231, 0), (0, 1, 0, 0), (0.1736481785774231, 0, -0.9848077297210693, 0), (0.11999999731779099, 0, -0.04800000041723251, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:place_eggs"]
+    }
+
+    def "egg_brown" (
+        prepend references = @./assets/egg_brown/egg_brown.usd@
+    )
+    {
+        matrix4d xformOp:transform:place_eggs = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (-0.07199999690055847, 0, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:place_eggs"]
+    }
+
+    def "egg_brushed_steel" (
+        prepend references = @./assets/egg_brushed_steel/egg_brushed_steel.usd@
+    )
+    {
+        matrix4d xformOp:transform:place_eggs = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (-0.024000000208616257, 0, -0.04800000041723251, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:place_eggs"]
+    }
+
+    def "egg_pickle" (
+        prepend references = @./assets/egg_pickle/egg_pickle.usd@
+    )
+    {
+        matrix4d xformOp:transform:place_eggs = ( (-0.3420201539993286, 0, 0.9396926164627075, 0), (0, 1, 0, 0), (-0.9396926164627075, 0, -0.3420201539993286, 0), (0.024000000208616257, 0, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:place_eggs"]
+    }
+
+    def "egg_cadbury" (
+        prepend references = @./assets/egg_cadbury/egg_cadbury.usd@
+    )
+    {
+        matrix4d xformOp:transform:place_eggs = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (-0.11999999731779099, 0, 0.04800000041723251, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:place_eggs"]
+    }
+
+    def "egg_crystal" (
+        prepend references = @./assets/egg_crystal/egg_crystal.usd@
+    )
+    {
+        matrix4d xformOp:transform:place_eggs = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (-0.024000000208616257, 0, 0.04800000041723251, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:place_eggs"]
+    }
+
+    def "egg_geode" (
+        prepend references = @./assets/egg_geode/egg_geode.usd@
+    )
+    {
+        matrix4d xformOp:transform:place_eggs = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0.024000000208616257, 0, 0.04800000041723251, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:place_eggs"]
+
+        over "geo"
+        {
+            over "render"
+            {
+                over "outside"
+                {
+                    float primvars:karma:object:dicingquality = 4 (
+                        interpolation = "constant"
+                    )
+                }
+            }
+        }
+    }
+
+    def "egg_gold" (
+        prepend references = @./assets/egg_gold/egg_gold.usd@
+    )
+    {
+        matrix4d xformOp:transform:place_eggs = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0.07199999690055847, 0, 0.04800000041723251, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:place_eggs"]
+    }
+
+    def "egg_howlite" (
+        prepend references = @./assets/egg_howlite/egg_howlite.usd@
+    )
+    {
+        matrix4d xformOp:transform:place_eggs = ( (0.8660253882408142, 0, 0.5, 0), (0, 1, 0, 0), (-0.5, 0, 0.8660253882408142, 0), (0.07199999690055847, 0, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:place_eggs"]
+    }
+
+    def "egg_jade" (
+        prepend references = @./assets/egg_jade/egg_jade.usd@
+    )
+    {
+        matrix4d xformOp:transform:place_eggs = ( (0.6427876353263855, 0, 0.7660444378852844, 0), (0, 1, 0, 0), (-0.7660444378852844, 0, 0.6427876353263855, 0), (-0.11999999731779099, 0, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:place_eggs"]
+    }
+
+    def "egg_lava_stone" (
+        prepend references = @./assets/egg_lava_stone/egg_lava_stone.usd@
+    )
+    {
+        matrix4d xformOp:transform:place_eggs = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0.07199999690055847, 0, -0.04800000041723251, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:place_eggs"]
+
+        over "geo"
+        {
+            over "render"
+            {
+                over "shape"
+                {
+                    float primvars:karma:object:dicingquality = 4 (
+                        interpolation = "constant"
+                    )
+                }
+            }
+        }
+    }
+
+    def "egg_marbles" (
+        prepend references = @./assets/egg_marbles/egg_marbles.usd@
+    )
+    {
+        matrix4d xformOp:transform:place_eggs = ( (0.5150380730628967, 0, -0.8571673035621643, 0), (0, 1, 0, 0), (0.8571673035621643, 0, 0.5150380730628967, 0), (-0.11999999731779099, 0, -0.04800000041723251, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:place_eggs"]
+    }
+
+    def "egg_normals" (
+        prepend references = @./assets/egg_normals/egg_normals.usd@
+    )
+    {
+        matrix4d xformOp:transform:place_eggs = ( (-0.5, 0, 0.8660253882408142, 0), (0, 1, 0, 0), (-0.8660253882408142, 0, -0.5, 0), (-0.07199999690055847, 0, 0.04800000041723251, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:place_eggs"]
+    }
+
+    def "egg_ore_swirl" (
+        prepend references = @./assets/egg_ore_swirl/egg_ore_swirl.usd@
+    )
+    {
+        matrix4d xformOp:transform:place_eggs = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0.11999999731779099, 0, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:place_eggs"]
+
+        over "geo"
+        {
+            over "render"
+            {
+                over "shape"
+                {
+                    float primvars:karma:object:dicingquality = 4 (
+                        interpolation = "constant"
+                    )
+                }
+            }
+        }
+    }
+
+    def "egg_patterns" (
+        prepend references = @./assets/egg_patterns/egg_patterns.usd@
+    )
+    {
+        matrix4d xformOp:transform:place_eggs = ( (0.9945219159126282, 0, 0.10452846437692642, 0), (0, 1, 0, 0), (-0.10452846437692642, 0, 0.9945219159126282, 0), (-0.024000000208616257, 0, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:place_eggs"]
+
+        over "geo"
+        {
+            over "render"
+            {
+                over "shape"
+                {
+                    float primvars:karma:object:dicingquality = 4 (
+                        interpolation = "constant"
+                    )
+                }
+            }
+        }
+    }
+
+    def "egg_onigiri" (
+        prepend references = @./assets/egg_onigiri/egg_onigiri.usd@
+    )
+    {
+        matrix4d xformOp:transform:place_eggs = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0.11999999731779099, 0, 0.04800000041723251, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:place_eggs"]
+    }
+
+    def "egg_white" (
+        prepend references = @./assets/egg_white/egg_white.usd@
+    )
+    {
+        matrix4d xformOp:transform:place_eggs = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (-0.07199999690055847, 0, -0.04800000041723251, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:place_eggs"]
+
+        over "geo"
+        {
+            over "render"
+            {
+                over "shape"
+                {
+                    float primvars:karma:object:dicingquality = 4 (
+                        interpolation = "constant"
+                    )
+                }
+            }
+        }
+    }
+
+    def "egg_wood" (
+        prepend references = @./assets/egg_wood/egg_wood.usd@
+    )
+    {
+        matrix4d xformOp:transform:place_eggs = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0.024000000208616257, 0, -0.04800000041723251, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:place_eggs"]
+    }
+
+    def "cyc_wall" (
+        prepend references = @./assets/cyc_wall/cyc_wall.usd@
+    )
+    {
+    }
+
+    def "macbeth_chart" (
+        prepend references = @./assets/macbeth_chart/macbeth_chart.usd@
+    )
+    {
+        matrix4d xformOp:transform:transform_macbeth_chart_18up = ( (0.174, 0, 0, 0), (0, 0.174, 0, 0), (0, 0, 0.174, 0), (0.07244077930207059, 0.01670391671359539, 0.12035514802631919, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:transform_macbeth_chart_18up"]
+    }
+
+    def "sphere_chrome" (
+        prepend references = @./assets/quadsphere/quadsphere.usd@
+        variants = {
+            string mtl = "chrome"
+        }
+    )
+    {
+        matrix4d xformOp:transform:transform_sphere_chrome_18up = ( (0.17, 0, 0, 0), (0, 0.17, 0, 0), (0, 0, 0.17, 0), (-0.097, 0.016999999545514583, 0.119217, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:transform_sphere_chrome_18up"]
+    }
+
+    def "sphere_midgray" (
+        prepend references = @./assets/quadsphere/quadsphere.usd@
+    )
+    {
+        matrix4d xformOp:transform:transform_sphere_midgray_18up = ( (0.17, 0, 0, 0), (0, 0.17, 0, 0), (0, 0, 0.17, 0), (-0.048, 0.016999999545514583, 0.119217, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform:transform_sphere_midgray_18up"]
+    }
+}
+
+def Xform "lights"
+{
+    def DomeLight "studio_small_09" (
+        prepend apiSchemas = ["HoudiniViewportGuideAPI"]
+    )
+    {
+        custom rel filters = None
+        float houdini:guidescale = 1
+        bool houdini:inviewermenu = 0
+        color3f inputs:color = (1, 1, 1)
+        float inputs:diffuse = 1
+        bool inputs:enableColorTemperature = 0
+        float inputs:exposure = 0.33
+        float inputs:intensity = 1
+        bool inputs:normalize = 0
+        float inputs:specular = 1
+        asset inputs:texture:file = @../tex/hdri/studio_small_09_4k.exr@
+        token inputs:texture:format = "automatic"
+        rel light:filters = None
+        rel portals = None
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+}
+
+def Xform "cameras"
+{
+    def Camera "camera_18up" (
+        prepend apiSchemas = ["HoudiniCameraPlateAPI", "HoudiniViewportGuideAPI"]
+    )
+    {
+        float2 clippingRange = (0.01, 100)
+        float exposure = 0
+        float focalLength = 0.5
+        float focusDistance = 0.8752311
+        float fStop = 0
+        float horizontalAperture = 0.20955
+        float horizontalApertureOffset = 0
+        asset houdini:backgroundimage = @@
+        asset houdini:foregroundimage = @@
+        float houdini:guidescale = 1
+        bool houdini:inviewermenu = 1
+        token projection = "perspective"
+        double shutter:close = 0.25
+        double shutter:open = -0.25
+        float verticalAperture = 0.11787187
+        float verticalApertureOffset = 0
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 0.8563868055872742, -0.5163348130971069, 0), (0, 0.5163348130971069, 0.8563868055872742, 0), (0, 0.47200530767440796, 0.7586915493011475, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+}
+
