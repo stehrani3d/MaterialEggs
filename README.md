@@ -59,7 +59,7 @@ Source file for rendering with Karma and exporting USD render scenes.
 - Authored with Houdini 20 / MaterialX 1.38
 - Render Working Space: ACEScg
 - View Transform: ACES 1.0 - SDR Video
-- Exr Color Space: Linear Rec.709 (sRGB)
+- EXR Color Space: Linear Rec.709 (sRGB)
 - Camera position (meters): 0, 0.038, 0.42
 - Focal Length: 100mm
 - Horizontal Aperture: 20.955
