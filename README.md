@@ -53,6 +53,8 @@ Source file for rendering with Karma and exporting USD render scenes.
 
 ![MaterialEggs 18up](render/extra/materialeggs_18up.jpg)
 
+![MaterialEggs 18up](render/extra/materialeggs_countertop.jpg)
+
 <br> 
 
 ## Notes
